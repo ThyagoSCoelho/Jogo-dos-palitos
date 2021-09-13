@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jogo Palito</title>
+        <meta name="description" content="Jogo feito pelo Thyago Stockler Coelho.">
+        <link rel="stylesheet" href="main.css">
+        <script src="engine.js"></script>
+    </head>
+    <body>
+        <h1>Jogo do Palito </h1>
+        <h4><a href="sobre.html">Como jogar?</a></h4>
+
+        <div id="inicio">    
+            <p class="inicio">Escolha um numero de 20 a 30:</p>       
+            <input type="number" class="palitos" id="palitos" required value="20" min="20" max="30">
+            <button onclick="comecar()">Iniciar Jogo</button>
+        </div>
+        <div id="interface">   
+            <p id="retirar">Retire de 1 a 3 palitos:</p>
+            <input type="number" inputmode="numeric" class="retirados" id="retirados" required value="1" min="1" max="3">
+            <button onclick="retirar()" id="bntRetirar">Retirar</button>
+            
+            <div id="conversa">
+                <p class="conversa" id="player"></p>
+                <p class="conversa" id="maquina"></p>
+            </div>
+        </div>
+        <div id="placar">
+            <h4 id="total"></h4>
+        </div>
+        <div id="restart">
+            <h4>Deseja jogar denovo?</h4>
+            <button onclick="sim()" class="restart">Sim</button>
+            <button onclick="nao()" class="restart">Não</button>
+        </div>
+        <div id="final">
+            <h1>Obrigado por Jogar</h1>
+            <h2>Esse site foi feito com o intuito de estudos por tanto se acharem algum erro me informar por gentileza.</h2>
+            <h4 id="dev">Ass: Thyago Stockler Coelho</h4>
+            <h6>2020/06</h6>
+            <h6 class="developer"><a onclick="voltar()" href="index.html">Voltar</a></h6>
+            <h6 class="developer"><a href="https://github.com/ThyagoSCoelho/Jogo-dos-palitos">Desenvolvedor 1 Periodo</a></h6>
+        </div>
+    </body>
+</html>
+
